@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;1,300&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Montserrat', sans-serif;
+}
+
+.app {
+    font-style: 'Arial', sans-serif;
+    min-height: 100vh;
+    text-align: center;
+    background-image: linear-gradient(rgb(255, 210, 210), rgb(16, 13, 56));
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+h1 {
+    padding: 20px;
+    font-size: 3rem;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+input {
+    border-radius: 20px;
+    padding: 5px;
+    margin: 5px;
+    font-size: 1.7rem;
+    border: 0px;
+    background-color: rgba(255, 255, 255, 0.541);
+    color: black;
+    width: 310px;
+    z-index: 10;
+}
+
+.search-btn {
+    background-color: #EB6769;
+    font-size: 1.9rem;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    box-shadow: 0px;
+    border: 0px;
+    transition: 0.5s;
+    font-weight: bold;
+    z-index: 10;
+}
+
+.search-btn:hover {
+    cursor: pointer;
+    background-color:#c54144;
+}
+
+
+#title {
+    position:relative;
+    font-weight: bold;
+    transition: .5s;
+}
+
+#title:hover {
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* Add psuedo-element to make more clickable area for the Javascript event.target */
+#title:after {
+    content:'';
+    position:absolute;
+    top:-12px; bottom:-25px; 
+    left:-10px; right:-10px; 
+    display: flex;
+}
+
+.output h2 {
+    margin: 20px;
+}
+
+.output {
+    width: 600px;
+    background-color: rgba(255, 255, 255, 0.466);
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1.3rem;
+    transition: .7s;
+    opacity: 0;
+    transform: translateY(500px);
+    
+}
+
+.active {
+    opacity: 1;
+    transform: translateY(0px);
+    z-index: 10;
+}
+
+.decorative-img {
+    position: fixed;
+    left: -225px;
+    width: 500px;
+    top: 100px;
+    z-index: 0;
+}
+
+@media only screen and (max-width: 600px) {
+
+    .app {
+        min-height: 100vh;
+    }
+    input {
+        width: 300px;
+        background-color: rgba(255, 255, 255, 0.8);
+    }
+
+    .output {
+        width: 300px;
+    }
+
+    .decorative-img {
+        position: fixed;
+        left: -90px;
+        width: 200px;
+        top: 100px;
+        z-index: 0;
+    }
+}
